@@ -10,6 +10,7 @@ class MoviesController < ApplicationController
   
   def result
   	search_term = params[:q]
+    search_term.gsub(/' '/, '%20') 
   	query = HTTParty.get("http://www.omdbapi.com/?t=#{search_term}")
   	@movie = Movie.new
   	@movie.save_details(query)
