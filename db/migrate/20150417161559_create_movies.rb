@@ -5,7 +5,7 @@ class CreateMovies < ActiveRecord::Migration
       t.integer :year
       t.string :poster_url
       t.text :plot
-      t.references :actor, index: true, foreign_key: true
+      # t.references :actor, index: true, foreign_key: true
 
       t.timestamps null: false
     end
