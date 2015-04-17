@@ -1,0 +1,14 @@
+<h1>Movie Thing Thang Thing</h1>
+
+<%= form_tag '/movies/result', method: :post do %>
+	<%= label_tag(:q, "Search for movie:") %>
+	<%= text_field_tag(:q) %>
+	<%= submit_tag("Search") %>
+<% end %>
+
+
+<% @movies.each do |movie| %>
+	<%=  movie.title %><br>
+
+
+<% end %>

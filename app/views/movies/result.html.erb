@@ -1,0 +1,16 @@
+Title: <%= @movie.title %><br>
+Year: <%= @movie.year %><br>
+<img src = "<%= @movie.poster_url %>" /><br>
+Plot: <%= @movie.plot %><br>
+Actors:<br>
+<% @actors.each do |actor| %>
+	<a href="">
+		<%= actor %>
+	</a>
+	<br>
+<% end %>
+
+
+
+
+<%= button_to "Favorite Me", "/movies", params:{title:@movie.title, year:@movie.year, poster_url:@movie.poster_url, plot:@movie.plot} %>	
