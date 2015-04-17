@@ -1,8 +1,8 @@
 class Movie < ActiveRecord::Base
   belongs_to :actor
   has_many :actors
-  validates :title, presence true
-  validates :year, presence true
+  validates :title, presence: true
+  validates :year, presence: true
 
   def save_details(query)
   	self.title = query["Title"]
